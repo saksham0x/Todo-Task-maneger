@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- hover-over -->
+    <main>
+        <nav>
+            <div class="right">Dely task's</div>
+            <div class="left"><button class="add-btn">Add new task </button></div>
+            
+        </nav>
+
+        <div class="big">
+            <div class="contener">
+
+            <div id="todo" class="first">
+                <div class="heading">
+                    <h4>Todo</h4>
+                    <h4>count
+                    </h4>
+                </div>  
+                
+                <div draggable="true" class="task">
+                    <h2>task 1</h2>
+                    <p>description</p>
+                    <button>delete</button>
+                </div>
+            </div>
+            <div id="progress" class="first">
+                <div class="heading">
+                    <h4>In-progress</h4>
+                    <h4>count
+                    </h4>
+                </div>
+                
+            </div>
+            <div id="done" class="first">
+                <div class="heading">
+                    <h4>Done</h4>
+                    <h4>count
+                    </h4>
+                </div>
+                
+            </div>
+        </div>
+
+        </div>
+        
+    </main>
+    
+    <div class="model add-new-task">
+        <div class="bg"></div>
+        
+        <div class="center">
+            <button id="Close">🗙</button>
+            <h3>Add New Task</h3>
+            
+            <input type="text" placeholder=" Task title" id="NewTask">
+            <textarea name="" id="New-Des" placeholder=" Task description"></textarea>
+            <button id="New-Btn">Add Task</button>
+        </div>
+        
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
