@@ -50,5 +50,5 @@ CloseBtn.addEventListener('click', () => {
 })
 
 addnewbtn.addEventListener('click', () => {
-    
+    console.log("change ho gya bsdk ")
 })
