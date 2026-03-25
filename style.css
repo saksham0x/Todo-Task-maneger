@@ -206,3 +206,7 @@ nav button {
     margin-bottom: 10px;
     cursor: pointer;
 }   
+
+.first {
+    overflow: auto;
+}
