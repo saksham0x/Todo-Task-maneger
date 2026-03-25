@@ -21,20 +21,20 @@
             <div id="todo" class="first">
                 <div class="heading">
                     <h4>Todo</h4>
-                    <h4>count
+                    <h4 id="count">count
                     </h4>
                 </div>  
                 
-                <div draggable="true" class="task">
+                <!-- <div draggable="true" class="task">
                     <h2>task 1</h2>
                     <p>description</p>
-                    <button>delete</button>
-                </div>
+                    <button id="delete-btn">delete</button>
+                </div> -->
             </div>
             <div id="progress" class="first">
                 <div class="heading">
                     <h4>In-progress</h4>
-                    <h4>count
+                    <h4 id="count">count
                     </h4>
                 </div>
                 
@@ -42,7 +42,7 @@
             <div id="done" class="first">
                 <div class="heading">
                     <h4>Done</h4>
-                    <h4>count
+                    <h4 id="count">count
                     </h4>
                 </div>
                 
@@ -60,7 +60,7 @@
             <button id="Close">🗙</button>
             <h3>Add New Task</h3>
             
-            <input type="text" placeholder=" Task title" id="NewTask">
+            <input type="text" id="new-title" placeholder=" Task title">
             <textarea name="" id="New-Des" placeholder=" Task description"></textarea>
             <button id="New-Btn">Add Task</button>
         </div>
