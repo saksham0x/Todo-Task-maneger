@@ -34,7 +34,8 @@ function loadTasks(){
 
             column.appendChild(div)
 
-            div.addEventListener('drag', () => {
+            // ✅ FIX
+            div.addEventListener('dragstart', () => {
                 dragElement = div
             })
         })
@@ -64,14 +65,24 @@ function updateCount(){
     localStorage.setItem("tasks", JSON.stringify(taskData))
 }
 
-// 🔥 Drag events
+// 🔥 Drag events (FULL FIX)
 function DragEvent(column){
+
+    column.addEventListener('dragenter', () => {
+        column.classList.add('hover-over')
+    })
+
+    column.addEventListener('dragleave', () => {
+        column.classList.remove('hover-over')
+    })
+
     column.addEventListener('dragover', (e) => {
         e.preventDefault()
     })
 
     column.addEventListener('drop', () => {
         column.appendChild(dragElement)
+        column.classList.remove('hover-over')
         updateCount()
     })
 }
@@ -99,7 +110,8 @@ addnewbtn.addEventListener('click', () => {
 
     todo.appendChild(div)
 
-    div.addEventListener('drag', () => {
+    // ✅ FIX
+    div.addEventListener('dragstart', () => {
         dragElement = div
     })
 
@@ -108,7 +120,7 @@ addnewbtn.addEventListener('click', () => {
     updateCount()
 })
 
-// 🔥 Delete (Event Delegation)
+// 🔥 Delete
 document.addEventListener('click', (e)=>{
     if(e.target.innerText === "delete"){
         e.target.parentElement.remove()
@@ -116,7 +128,7 @@ document.addEventListener('click', (e)=>{
     }
 })
 
-// 🔥 Modal
+// 🔥 Modal (FIXED)
 addbtn.addEventListener('click', () => {
     model.classList.add('active')
 })
